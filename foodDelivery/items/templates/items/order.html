@@ -1,0 +1,21 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Your Order{% endblock %}
+
+{% block content %}
+    {% for order in orders_made %}
+        <div class="flex bg-green-100 rounded-xl m-4">
+            <div class="pr-6">
+                <img src="{{ item.image.url }}">
+            </div>
+            <div>
+                <p class="mt-4"><strong>{{ order.item.name }}</strong></p>
+                <p><strong>Seller:</strong>{{ order.seller.username }}</p>
+                <p><strong>Purchase time:</strong></p>
+                <p><strong class="mb-4">Predicted arriving time:</strong></p>
+            </div>
+            
+            
+        </div>
+    {% endfor %}
+{% endblock %}
